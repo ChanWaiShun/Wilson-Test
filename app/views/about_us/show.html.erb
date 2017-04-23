@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @about_u.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @about_u.phone %>
+</p>
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_about_u_path(@about_u) %> |
+<% else %>
+<% end %>
+<%= link_to 'Back', about_us_path %>

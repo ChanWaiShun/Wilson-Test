@@ -1,0 +1,20 @@
+<% content_for :title do %>Account information<% end %>
+<h3>Account information</h3>
+<p id="notice"><%= notice %></p>
+
+
+
+User ID:     <%= current_user.id%><br/>
+User Name:   <%= current_user.name%><br/>
+User Email:  <%= current_user.email%><br/>
+account sign up date: <%= current_user.created_at%><br/>
+
+
+
+
+<br /><br /><br />
+    <% if current_user.id===2 %>
+    <p> You are administrator</p>
+    <p>Number of registered users: <%= User.count %></p>
+    <%end%>
+
